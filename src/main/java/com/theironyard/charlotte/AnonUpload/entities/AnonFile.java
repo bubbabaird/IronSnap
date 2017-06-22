@@ -18,12 +18,24 @@ public class AnonFile {
     @Column(nullable = false)
     String originalFilename;
 
+    @Column(nullable = false)
+    int expirationTime;
+
     public AnonFile() {
     }
 
-    public AnonFile(String filename, String originalFilename) {
+    public int getExpirationTime() {
+        return expirationTime;
+    }
+
+    public void setExpirationTime(int expirationTime) {
+        this.expirationTime = expirationTime;
+    }
+
+    public AnonFile(String filename, String originalFilename, int expirationTime) {
         this.filename = filename;
         this.originalFilename = originalFilename;
+        this.expirationTime = expirationTime;
     }
 
     public int getId() {
