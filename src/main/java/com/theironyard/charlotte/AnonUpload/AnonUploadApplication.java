@@ -11,7 +11,6 @@ public class AnonUploadApplication {
 
 	public static void main(String[] args) throws SQLException {
 //		Server.createWebServer().start();
-//		new comment
 		SpringApplication.run(AnonUploadApplication.class, args);
 	}
 }
